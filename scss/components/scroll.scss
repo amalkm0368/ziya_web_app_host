@@ -1,0 +1,29 @@
+@use "sass:color";
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: #00aeef;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  display: none; // initially hidden
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  i {
+    line-height: 1;
+  }
+
+  &:hover {
+    background-color: color.adjust(#00aeef, $lightness: -10%);
+    transform: translateY(-2px);
+  }
+}

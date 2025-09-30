@@ -1,0 +1,155 @@
+ <!-- Enquiry Form Section -->
+  <section class="enquiry-form-section" id="enquiry">
+    <div class="container enquiry-form-container">
+      <div class="enquiry-form-content-section">
+        <div class="enquiry-form-hero">
+          <h1>Unlock Your Potential With Ziya Academy</h1>
+          <p>
+            From school education to professional IT training - your complete
+            learning solutions.
+          </p>
+        </div>
+      </div>
+
+      <div class="enquiry-form-wrapper">
+        <div class="form-side-header">
+          <h2>Get Started</h2>
+          <p>Fill out the form below and we'll get back to you</p>
+        </div>
+        <div class="enquiry-form-card">
+          <div class="enquiry-form-body">
+            <form id="enquiryForm">
+              <div class="enquiry-form-group">
+                <label for="name">Full Name*</label>
+                <div class="enquiry-input-wrapper">
+                  <img src="./assets/icons/user_icon_blu.svg" alt="user" class="enquiry-input-icon-img" />
+                  <input type="text" id="name" name="name" class="enquiry-form-input" />
+                </div>
+                <div class="error-message" id="name-error"></div>
+              </div>
+
+              <div class="enquiry-form-group">
+                <label for="email">Email Address*</label>
+                <div class="enquiry-input-wrapper">
+                  <img src="./assets/icons/email_icon_blu.svg" alt="email" class="enquiry-input-icon-img" />
+                  <input type="email" id="email" name="email" class="enquiry-form-input" />
+                </div>
+                <div class="error-message" id="email-error"></div>
+              </div>
+
+              <div class="enquiry-form-group">
+                <label for="phone">Phone Number*</label>
+                <div class="enquiry-input-wrapper">
+                  <img src="./assets/icons/phone_icon_blu.svg" alt="phone" class="enquiry-input-icon-img" />
+                  <input type="tel" id="phone" name="phone" class="enquiry-form-input" />
+                </div>
+                <div class="error-message" id="phone-error"></div>
+              </div>
+
+              <div class="enquiry-form-group">
+                <label for="category">I'm Interested In*</label>
+                <div class="enquiry-input-wrapper">
+                  <select name="category" id="category" class="enquiry-form-select">
+                    <option value="">Choose your area of interest</option>
+                    <option value="school">
+                      School Education (LKG to +2)
+                    </option>
+                    <option value="nios">
+                      NIOS (National Institute of Open Schooling)
+                    </option>
+                    <option value="ignou">IGNOU (Distance Learning)</option>
+                    <option value="internship">
+                      Professional Internship Program
+                    </option>
+                    <option value="it_services">
+                      IT Services & Solutions
+                    </option>
+                  </select>
+                  <i class="fas fa-graduation-cap enquiry-input-icon"></i>
+                </div>
+                <div class="error-message" id="category-error"></div>
+              </div>
+
+              <!-- SCHOOL Options -->
+              <div class="enquiry-sub-field" id="school-options">
+                <div class="enquiry-form-group">
+                  <label for="school_class">Select Class/Grade*</label>
+                  <select name="school_class" id="school_class" class="enquiry-form-select">
+                    <option value="">Choose your class</option>
+                    <option value="lkg">LKG (Lower Kindergarten)</option>
+                    <option value="ukg">UKG (Upper Kindergarten)</option>
+                    <option value="1-5">Classes 1st to 5th</option>
+                    <option value="6-10">Classes 6th to 10th</option>
+                    <option value="plus-one">Plus One (11th Grade)</option>
+                    <option value="plus-two">Plus Two (12th Grade)</option>
+                  </select>
+                </div>
+                <div class="error-message" id="school_class-error"></div>
+              </div>
+
+              <!-- INTERNSHIP Options -->
+              <div class="enquiry-sub-field" id="internship-options">
+                <div class="enquiry-form-group">
+                  <label for="internship">Choose Internship Program*</label>
+                  <select name="internship" id="internship" class="enquiry-form-select">
+                    <option value="">Select your specialization</option>
+                    <option value="python">Python Development</option>
+                    <option value="react">React.js Development</option>
+                    <option value="flutter">
+                      Flutter Mobile Development
+                    </option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="mern">MERN Stack Development</option>
+                    <option value="testing">Software Testing & QA</option>
+                    <option value="cybersecurity">Cyber Security</option>
+                    <option value="digital-marketing">
+                      Digital Marketing
+                    </option>
+                  </select>
+                </div>
+                <div class="error-message" id="internship-error"></div>
+                <div class="terms-checkbox">
+                  <input type="checkbox" id="termsCheckbox" name="termsAccepted">
+                  <label for="termsCheckbox">I accept the <a href="terms_conditions.html" target="_blank">Terms &
+                      Conditions</a></label>
+                  <div class="error-message" id="termsAccepted-error"></div>
+                </div>
+              </div>
+
+              <!-- IT SERVICES Options -->
+              <div class="enquiry-sub-field" id="it-services-options">
+                <div class="enquiry-form-group">
+                  <label for="it_service">Select IT Service*</label>
+                  <select name="it_service" id="it_service" class="enquiry-form-select">
+                    <option value="">Choose the service you need</option>
+                    <option value="mobile-app">Mobile App Development</option>
+                    <option value="web-app">
+                      Web Application Development
+                    </option>
+                    <option value="dashboard">
+                      Dashboard & Analytics Solutions
+                    </option>
+                    <option value="ecommerce">E-commerce Solutions</option>
+                    <option value="custom-software">
+                      Custom Software Development
+                    </option>
+                  </select>
+                </div>
+                <div class="error-message" id="it_service-error"></div>
+              </div>
+
+              <div class="enquiry-form-group">
+                <label for="message">Message or Specific Requirements</label>
+                <textarea name="message" id="message" rows="3" class="enquiry-form-textarea"
+                  placeholder="Tell us more..."></textarea>
+              </div>
+
+              <button type="submit" class="enquiry-submit-btn">
+                Send Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
