@@ -126,13 +126,16 @@ function initEnquiryForm() {
           break;
       }
 
-      const response = await axios.post('https://api-ziya-academy.onrender.com', formData, {
+      // Prepare form data for sending email using app script
+      const bodyData = toUrlEncoded(formData);
+      const response = await axios.post('https://script.google.com/macros/s/AKfycbxdQgovRTGUQONRJZkJO5krwM8y6WlaybR5NYaFkmsLf46Dqu5ZizIhI4qUgK_BjNqp/exec', bodyData, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         }
       });
+      
 
-      if (response.data.success) {
+      if (response.data.result === 'success') {
         showToast(
           "Thank you! Your enquiry has been sent successfully.",
           'success'
@@ -154,4 +157,11 @@ function initEnquiryForm() {
       setLoadingState(elements.submitBtn, false, originalBtnText);
     }
   }
+}
+
+//Helper function to URL-encode form data
+function toUrlEncoded(obj) {
+  return Object.keys(obj).map(key => 
+    encodeURIComponent(key) + '=' + encodeURIComponent(obj[key])
+  ).join('&');
 }
